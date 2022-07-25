@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet"  href="/css/style.css" >
+<script src="/js/aiven.jquery.js" ></script>
+<head>
+    <title>Available Clouds</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+
+<body>
+
+<div class="flex-container">
+    <button th:each="cloudProvider: ${cloudProviders}" class="flex-child aiven-CloudBox images" th:id="${cloudProvider}">
+        <img th:class="'aiven-CloudBox_logo img_'+${cloudProvider}"  />
+    </button>
+</div>
+
+
+<div class="flex-container" id="regions">
+    <div th:each="region : ${cloudsMap}" class="flex-child" >
+        <div  th:text="${region.key}" class="region"/>
+        <div th:each="regionalProvider : ${region.value}" >
+            <div th:text="${#strings.substringAfter(regionalProvider.cloudDescription,':')}" class="region_data"  th:classappend="${(#strings.contains(regionalProvider.cloudName,cloudProviders[0]) ? 'show' : 'hide') + ' ' + (#strings.substringBefore(regionalProvider.cloudName,'-'))}   "/>
+        </div>
+    </div>
+</div>
+</body>
+</html>

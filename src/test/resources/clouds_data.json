@@ -1,0 +1,11 @@
+{
+  "clouds": [
+    {
+      "cloud_description": "Africa, South Africa - Amazon Web Services: Cape Town",
+      "cloud_name": "aws-af-south-1",
+      "geo_latitude": -33.92,
+      "geo_longitude": 18.42,
+      "geo_region": "africa"
+    }
+  ]
+}

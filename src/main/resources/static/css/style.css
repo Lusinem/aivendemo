@@ -1,0 +1,55 @@
+.flex-container {
+    display: flex;
+}
+
+.flex-child {
+    flex: 1;
+    border: 2px solid #e3e3e3;
+}
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+.img_google{
+    content: url(https://console.aiven.io/12dd8ede1ec5662bd952.png);
+}
+.img_azure{
+    content: url(https://console.aiven.io/abd104fcaa95b7170f18.png);
+}
+.img_do{
+    content: url(https://console.aiven.io/a05da1e90e03ed7fcb13.png);
+}
+.img_aws{
+    content: url(https://console.aiven.io/c92d94da58c05f876855.png);
+}
+.img_upcloud{
+    content: url(https://console.aiven.io/003960c8a7eed05fa7fa.png);
+}
+
+.images {
+    background-repeat: no-repeat;
+}
+.aiven-CloudBox{
+    width: 134px;
+    height: 134px;
+    margin: 10px;
+}
+.aiven-CloudBox_logo {
+    max-width: 100%;
+    max-height: 100%;
+}
+.region{
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 0 10px 0;
+    border-bottom: 1px solid #e3e3e3;
+    font-size: large;
+    font-weight: bold;
+}
+.region_data {
+    text-align: center;
+    padding: 5px 0;
+}
